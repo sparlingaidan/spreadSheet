@@ -1,0 +1,53 @@
+equation =  equation level8 |
+        level8
+
+level8 = level8 Rvalue |
+        level8 Sum |
+        level8 Max |
+        level8 Min |
+        level8 Mean |
+        level7 
+
+level7 = level7 Integer |
+        level7 Float |
+        level7 Boolean |
+        level7 String |
+        level7 ToFloat |
+        level7 ToInt |
+        level6
+
+level6 = parenthesis |
+        level5
+
+level5 = level4 Exponenets level5 |
+        level4
+
+level4 = level4 Multiply level3 |
+        level4 Modulo level3 |
+        level4 LeftShift level3 |
+        level4 RightShift level3 |
+        level3
+
+level3 = level3 Add level2 |
+        level3 Subtract level2 |
+        level2
+
+level2 = level2 Not |
+        level2 Negate |
+        level 1
+
+level1 = level1 LessThan level0 |
+        level1 GreaterThan level0 |
+        level1 LessThanOrEqual level0 |
+        level1 GreaterThanOrEqual level0 |
+        level1 Equals level0 |
+        level1 NotEquals level0 |
+        level0
+
+level0 = level0 And levelN |
+        level0 Xor levelN|
+        levelN
+
+levelN = levelN or|
+        levelN
+        
